@@ -1,0 +1,235 @@
+@import url("./style.css");
+
+/* Контейнер */
+.vacancies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.vacancies__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+}
+.vacancies__left {
+  flex: 2;
+}
+.vacancies__right {
+  flex: 1;
+}
+.vacancies h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Вакансии */
+.vacancy-card {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+.vacancy-card__left {
+  flex: 1;
+  padding-right: 20px;
+}
+.vacancy-card__right {
+  flex: 2;
+}
+.vacancy-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.vacancy-card__salary {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.vacancy-card__tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.vacancy-card__tags span {
+  background: #e6e6e6;
+  padding: 6px 14px;
+  border-radius: 10px;
+}
+.vacancy-card__company,
+.vacancy-card__address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.vacancy-card__desc {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+  max-width: 260px;
+  margin-right: 30px;
+}
+.vacancy-card__actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+.vacancy-card__fav {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.vacancy-card__fav:hover path {
+  fill: var(--btn-bg);
+}
+
+/* Организации */
+.org-card {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.org-card img {
+  border-radius: 10px;
+}
+.org-card__info {
+  flex: 1;
+}
+.org-card__info p {
+  margin-bottom: 5px;
+}
+.star {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.org-card__fav {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.org-card__fav:hover path {
+  fill: var(--btn-bg);
+}
+
+/* Кнопки */
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn--red {
+  background: #c40000;
+  color: #fff;
+}
+.btn--red:hover {
+  background: #630000;
+}
+.btn--outline {
+  border: 2px solid #c40000;
+  color: #c40000;
+  background: transparent;
+}
+.btn--outline:hover {
+  background: #c40000;
+  color: #fff;
+}
+
+/* Пагинация */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.pagination a,
+.pagination span {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+.pagination a:hover {
+  color: #c40000;
+}
+
+/* Футер */
+.footer {
+  background: #f5f5f5;
+  padding: 40px 20px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.footer__col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.footer__col a,
+.footer__col p {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #000;
+  text-decoration: none;
+}
+.footer__socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.footer__socials img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .vacancy-card {
+    gap: 15px;
+  }
+  .vacancy-card__left {
+    padding-right: 0;
+  }
+}
+
+@media (960px >= width) {
+  .vacancy-card {
+    flex-direction: column;
+    width: 100%;
+  }
+  .vacancy-card__desc {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .vacancy-card h3 {
+    font-size: 20px;
+  }
+}

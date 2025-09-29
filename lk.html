@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вакансии</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/lk.css">
+</head>
+
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo" onclick="window.location.href='index.html'">
+        <img src="./icons/Logo.svg" alt="Логотип">
+      </div>
+
+      <!-- Адрес для мобильной версии -->
+      <div class="header__address-mobile">
+        <p>Чебоксары</p>
+        <svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+          <path
+            d="M25.0699 17.88C24.0219 20.004 22.6019 22.12 21.1499 24.02C19.771 25.81 18.2983 27.5258 16.7379 29.16C15.1775 27.5258 13.7048 25.81 12.3259 24.02C10.8739 22.12 9.45392 20.004 8.40592 17.88C7.34592 15.734 6.73792 13.724 6.73792 12C6.73792 9.34784 7.79148 6.8043 9.66685 4.92893C11.5422 3.05357 14.0858 2 16.7379 2C19.3901 2 21.9336 3.05357 23.809 4.92893C25.6843 6.8043 26.7379 9.34784 26.7379 12C26.7379 13.724 26.1279 15.734 25.0699 17.88ZM16.7379 32C16.7379 32 28.7379 20.628 28.7379 12C28.7379 8.8174 27.4736 5.76515 25.2232 3.51472C22.9728 1.26428 19.9205 0 16.7379 0C13.5553 0 10.5031 1.26428 8.25263 3.51472C6.0022 5.76515 4.73792 8.8174 4.73792 12C4.73792 20.628 16.7379 32 16.7379 32Z"
+            fill="black" />
+          <path
+            d="M16.7379 16C15.677 16 14.6596 15.5786 13.9095 14.8284C13.1593 14.0783 12.7379 13.0609 12.7379 12C12.7379 10.9391 13.1593 9.92172 13.9095 9.17157C14.6596 8.42143 15.677 8 16.7379 8C17.7988 8 18.8162 8.42143 19.5663 9.17157C20.3165 9.92172 20.7379 10.9391 20.7379 12C20.7379 13.0609 20.3165 14.0783 19.5663 14.8284C18.8162 15.5786 17.7988 16 16.7379 16ZM16.7379 18C18.3292 18 19.8553 17.3679 20.9806 16.2426C22.1058 15.1174 22.7379 13.5913 22.7379 12C22.7379 10.4087 22.1058 8.88258 20.9806 7.75736C19.8553 6.63214 18.3292 6 16.7379 6C15.1466 6 13.6205 6.63214 12.4953 7.75736C11.3701 8.88258 10.7379 10.4087 10.7379 12C10.7379 13.5913 11.3701 15.1174 12.4953 16.2426C13.6205 17.3679 15.1466 18 16.7379 18Z"
+            fill="black" />
+        </svg>
+      </div>
+
+      <div class="header__role-switcher role-switcher">
+        <button class="role-switcher__button role-switcher__button_active" onclick="window.location.href='index.html'" >Соискатель</button>
+        <span>|</span>
+        <button class="role-switcher__button" onclick="window.location.href='index_employer.html'" >Работодатель</button>
+      </div>
+
+      <div class="header__actions actions">
+        <div class="actions__address">
+          <p>Чебоксары</p>
+          <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M25.0699 17.88C24.0219 20.004 22.6019 22.12 21.1499 24.02C19.771 25.81 18.2983 27.5258 16.7379 29.16C15.1775 27.5258 13.7048 25.81 12.3259 24.02C10.8739 22.12 9.45392 20.004 8.40592 17.88C7.34592 15.734 6.73792 13.724 6.73792 12C6.73792 9.34784 7.79148 6.8043 9.66685 4.92893C11.5422 3.05357 14.0858 2 16.7379 2C19.3901 2 21.9336 3.05357 23.809 4.92893C25.6843 6.8043 26.7379 9.34784 26.7379 12C26.7379 13.724 26.1279 15.734 25.0699 17.88ZM16.7379 32C16.7379 32 28.7379 20.628 28.7379 12C28.7379 8.8174 27.4736 5.76515 25.2232 3.51472C22.9728 1.26428 19.9205 0 16.7379 0C13.5553 0 10.5031 1.26428 8.25263 3.51472C6.0022 5.76515 4.73792 8.8174 4.73792 12C4.73792 20.628 16.7379 32 16.7379 32Z"
+              fill="black" />
+            <path
+              d="M16.7379 16C15.677 16 14.6596 15.5786 13.9095 14.8284C13.1593 14.0783 12.7379 13.0609 12.7379 12C12.7379 10.9391 13.1593 9.92172 13.9095 9.17157C14.6596 8.42143 15.677 8 16.7379 8C17.7988 8 18.8162 8.42143 19.5663 9.17157C20.3165 9.92172 20.7379 10.9391 20.7379 12C20.7379 13.0609 20.3165 14.0783 19.5663 14.8284C18.8162 15.5786 17.7988 16 16.7379 16ZM16.7379 18C18.3292 18 19.8553 17.3679 20.9806 16.2426C22.1058 15.1174 22.7379 13.5913 22.7379 12C22.7379 10.4087 22.1058 8.88258 20.9806 7.75736C19.8553 6.63214 18.3292 6 16.7379 6C15.1466 6 13.6205 6.63214 12.4953 7.75736C11.3701 8.88258 10.7379 10.4087 10.7379 12C10.7379 13.5913 11.3701 15.1174 12.4953 16.2426C13.6205 17.3679 15.1466 18 16.7379 18Z"
+              fill="black" />
+          </svg>
+        </div>
+        <div class="actions__resume">
+          <p>Создать резюме</p>
+        </div>
+        <div class="actions__auth" onclick="window.location.href='reg.html'" >
+          <span>Оксана</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3.75 17.5C3.75 17.5 2.5 17.5 2.5 16.25C2.5 15 3.75 11.25 10 11.25C16.25 11.25 17.5 15 17.5 16.25C17.5 17.5 16.25 17.5 16.25 17.5H3.75ZM10 10C10.9946 10 11.9484 9.60491 12.6517 8.90165C13.3549 8.19839 13.75 7.24456 13.75 6.25C13.75 5.25544 13.3549 4.30161 12.6517 3.59835C11.9484 2.89509 10.9946 2.5 10 2.5C9.00544 2.5 8.05161 2.89509 7.34835 3.59835C6.64509 4.30161 6.25 5.25544 6.25 6.25C6.25 7.24456 6.64509 8.19839 7.34835 8.90165C8.05161 9.60491 9.00544 10 10 10Z"
+              fill="#000" />
+          </svg>
+        </div>
+      </div>
+      <button class="header__burger" id="burgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__content">
+      <div class="role-switcher">
+        <button class="role-switcher__button role-switcher__button_active" onclick="window.location.href='index.html'">Соискатель</button>
+        <span>|</span>
+        <button class="role-switcher__button" onclick="window.location.href='index_employer.html'">Работодатель</button>
+      </div>
+
+      <div class="actions">
+        <div class="actions__resume">
+          <p onclick="window.location.href='lk.html'">Создать вакансию</p>
+        </div>
+        <div class="actions__auth actions__auth_m">
+          <span onclick="window.location.href='reg.html'">Вход</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3.75 17.5C3.75 17.5 2.5 17.5 2.5 16.25C2.5 15 3.75 11.25 10 11.25C16.25 11.25 17.5 15 17.5 16.25C17.5 17.5 16.25 17.5 16.25 17.5H3.75ZM10 10C10.9946 10 11.9484 9.60491 12.6517 8.90165C13.3549 8.19839 13.75 7.24456 13.75 6.25C13.75 5.25544 13.3549 4.30161 12.6517 3.59835C11.9484 2.89509 10.9946 2.5 10 2.5C9.00544 2.5 8.05161 2.89509 7.34835 3.59835C6.64509 4.30161 6.25 5.25544 6.25 6.25C6.25 7.24456 6.64509 8.19839 7.34835 8.90165C8.05161 9.60491 9.00544 10 10 10Z"
+              fill="#000" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="lk-main">
+    <div class="lk-profile-header">
+      <div class="lk-profile-info">
+        <div class="lk-avatar-placeholder"></div>
+        <div class="lk-details">
+          <p class="lk-name">Петрова Оксана</p>
+          <p class="lk-dob">25.03.2007</p>
+        </div>
+        <div class="lk-contact">
+          <p class="lk-phone-label">Номер телефона:</p>
+          <p class="lk-phone-number">+7 935 354 34 23</p>
+        </div>
+      </div>
+      <a href="#" class="lk-edit-profile-btn">Редактировать профиль</a>
+    </div>
+
+    <div class="lk-nav-links">
+      <a href="#" class="lk-nav-btn">Ваши отклики</a>
+      <a href="#" class="lk-nav-btn">Ваши приглашения</a>
+      <a href="#" class="lk-nav-btn lk-nav-btn-active">Ваше резюме</a>
+    </div>
+
+    <div class="lk-resume-form-container">
+      <h2 class="lk-form-title">Заполните резюме!</h2>
+      <form class="lk-resume-form">
+        <input type="text" placeholder="Фамилия" aria-label="Фамилия">
+        <input type="text" placeholder="Имя" aria-label="Имя">
+        <input type="text" placeholder="Отчество (необязательно)" aria-label="Отчество">
+
+        <div class="lk-form-row">
+          <div class="lk-form-group">
+            <label>Пол</label>
+            <div class="lk-gender-select">
+              <button type="button" class="lk-gender-btn lk-gender-active">Женский</button>
+              <button type="button" class="lk-gender-btn">Мужской</button>
+            </div>
+          </div>
+
+          <input type="text" placeholder="Дата рождения дд.мм.гг" class="lk-date-input" aria-label="Дата рождения">
+        </div>
+
+        <div class="lk-form-row">
+          <input type="text" placeholder="Город" aria-label="Город">
+          <input type="text" placeholder="Номер телефона" aria-label="Номер телефона">
+        </div>
+
+        <div class="lk-form-row">
+          <div class="lk-form-group lk-citizenship-group">
+            <label>Гражданство</label>
+            <select aria-label="Гражданство">
+              <option>Россия</option>
+            </select>
+          </div>
+        </div>
+
+        <input type="text" placeholder="Специальность" aria-label="Специальность">
+
+        <button type="submit" class="lk-submit-btn">Сохранить</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="./icons/Logo.svg" alt="Логотип">
+    </div>
+    <div class="footer__container container">
+      <div class="footer__col">
+        <h4>Ориентир</h4>
+        <a href="./index.html">Главная</a>
+        <a href="./vacancy.html">Вакансии</a>
+        <a href="#">Резюме</a>
+      </div>
+      <div class="footer__col">
+        <h4>Работодатель</h4>
+        <a href="index_employer.html">Страница</a>
+        <a href="#">Создание вакансии</a>
+        <a href="#">Просмотр резюме</a>
+      </div>
+      <div class="footer__col">
+        <h4>Соискатель</h4>
+        <a href="index.html">Страница</a>
+        <a href="#">Создание резюме</a>
+        <a href="vacancy.html">Просмотр вакансий</a>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:88354592228">8 835 459-22-28</a>
+        <a href="mailto:GoodJob@mail.ru">GoodJob@mail.ru</a>
+        <div class="footer__socials">
+          <a href="https://vk.com"><img class="footer__socials-icon" src="./icons/vk.svg" alt="VK"></a>
+          <a href="https://whatsapp.com"><img class="footer__socials-icon" src="./icons/whatsapp.svg"
+              alt="WhatsApp"></a>
+          <a href="https://web.telegram.org/k/"><img class="footer__socials-icon" src="./icons/telegram.svg"
+              alt="Telegram"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Скрипт бургер-меню -->
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burgerBtn.addEventListener('click', function () {
+      this.classList.toggle('burger-open');
+      mobileMenu.classList.toggle('mobile-menu--open');
+      document.body.style.overflow = mobileMenu.classList.contains('mobile-menu--open') ? 'hidden' : '';
+    });
+  </script>
+</body>
+
+</html>
